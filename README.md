@@ -5,11 +5,11 @@ Your one-stop destination for all the documentation about building Android can b
 
 ## Repo Init ##
 ```bash
-repo init -u https://github.com/StatiXOS/android_manifest.git -b udc-qpr1
+repo init --depth=1 --no-repo-verify -u https://github.com/yehonatan2020/statix_android_manifest.git -b udc-qpr1 --git-lfs
 ```
 ## Sync Source ##
 ```bash
-repo sync --force-sync --no-clone-bundle --current-branch --no-tags -j$(nproc --all)
+repo --no-pager --color=always sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune
 ```
 ## Build Time (Linux x86_64 ONLY) ##
 ```bash
