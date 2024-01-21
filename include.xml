@@ -10,6 +10,10 @@
            revision="udc-qpr1"
            fetch="https://github.com/StatiXOS/" />
 
+  <remote  name="custom"
+           revision="udc-qpr1"
+           fetch="https://github.com/yehonatan2020/" />
+
   <!-- GitLab -->
   <remote name="gitlab"
            fetch="https://gitlab.com/" />
@@ -25,7 +29,7 @@
   <project path="bionic" name="android_bionic" remote="statix" />
 
   <!-- Build -->
-  <project path="build/make" name="android_build" remote="statix" groups="pdk" >
+  <project path="build/make" name="statix_android_build" remote="custom" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -50,7 +54,7 @@
 
   <!-- Frameworks -->
   <project path="frameworks/av" name="android_frameworks_av" remote="statix" />
-  <project path="frameworks/base" name="android_frameworks_base" remote="statix" />
+  <project path="frameworks/base" name="statix_frameworks_base" remote="custom" revision="udc-qpr1"/>
   <project path="frameworks/native" name="android_frameworks_native" remote="statix" />
 
   <!-- Google Mobile Services -->
@@ -78,12 +82,12 @@
   <project path="packages/apps/Aperture" name="android_packages_apps_Aperture" remote="statix" />
   <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" remote="statix" />
   <project path="packages/apps/RepainterServicePriv" name="android_packages_apps_RepainterServicePriv" remote="statix" revision="tm" />
-  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="statix" />
+  <project path="packages/apps/Settings" name="statix_packages_apps_Settings" remote="custom" revision="udc-qpr1" />
   <project path="packages/apps/SystemUIFlagFlipper" name="android_packages_apps_SystemUIFlagFlipper" remote="statix" />
   <project path="packages/apps/SimpleDeviceConfig" name="android_packages_apps_SimpleDeviceConfig" remote="statix" revision="tm" />
   <project path="packages/apps/Statix/ColorStub" name="android_packages_apps_Statix_ColorStub" remote="statix" />
   <project path="packages/apps/Statix/Launcher" name="android_packages_apps_Statix_Launcher" remote="statix" />
-  <project path="packages/apps/Statix/Settings" name="android_packages_apps_Statix_Settings" remote="statix" />
+  <project path="packages/apps/Statix/Settings" name="statix_packages_apps_Statix_Settings" remote="custom" />
   <project path="packages/apps/Statix/SystemUI" name="android_packages_apps_Statix_SystemUI" remote="statix" />
   <project path="packages/apps/Statix/ThemePicker" name="android_packages_apps_Statix_ThemePicker" remote="statix" />
   <project path="packages/apps/Statix/Wallpapers" name="android_packages_apps_Statix_Wallpapers" remote="statix" />
@@ -101,7 +105,7 @@
   <project path="bootable/recovery" name="android_bootable_recovery" remote="statix" />
 
   <!-- System -->
-  <project path="system/core" name="android_system_core" remote="statix" />
+  <project path="system/core" name="statix_system_core" remote="custom" />
   <project path="system/libhidl" name="android_system_libhidl" remote="statix" />
   <project path="system/sepolicy" name="android_system_sepolicy" remote="statix" />
 
