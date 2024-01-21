@@ -1,6 +1,6 @@
 [<center><img src="https://raw.githubusercontent.com/sourajitk/STX-Logo/main/stx-2023.png" height="50%" width="50%;" /></center>](https://github.com/StatiXOS)
 
-## Building Android ##
+## Building Statix Special Edition ##
 Your one-stop destination for all the documentation about building Android can be found [here](https://source.android.com/setup/build/building).
 
 ## Repo Init ##
@@ -11,10 +11,11 @@ repo init --depth=1 --no-repo-verify -u https://github.com/yehonatan2020/statix_
 ```bash
 repo --no-pager --color=always sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune
 ```
-## Build Time (Linux x86_64 ONLY) ##
+## Build A GSI that can be loaded with DSU ##
 ```bash
-. build/envsetup.sh
-brunch statix_<DEVICE>-userdebug (or statix_<DEVICE>-user)
+source build/envsetup.sh
+lunch statix_arm64-userdebug (or statix_arm64-user)
+m gsi
 ```
 ### Submitting Patches ###
 
