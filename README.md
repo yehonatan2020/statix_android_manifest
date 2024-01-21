@@ -17,6 +17,19 @@ source build/envsetup.sh
 lunch statix_arm64-userdebug (or statix_arm64-user)
 m gsi
 ```
+## Build A complete ROM (Fastboot) ##
+```bash
+source build/envsetup.sh
+lunch statix_<device>-userdebug (or statix_<device>-user)
+m updatepackage
+```
+## Build A complete ROM (Sideload) ##
+```bash
+source build/envsetup.sh
+lunch statix_<device>-userdebug (or statix_<device>-user)
+m bacon
+```
+
 ### Submitting Patches ###
 
 Patches are welcomed here at StatiXOS.
