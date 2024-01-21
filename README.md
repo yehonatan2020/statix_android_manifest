@@ -15,19 +15,19 @@ repo --no-pager --color=always sync -c -j$(nproc --all) --force-sync --no-clone-
 ```bash
 source build/envsetup.sh
 lunch statix_arm64-userdebug (or statix_arm64-user)
-m gsi
+m gsi -j$(nproc --all)
 ```
 ## Build A complete ROM (Fastboot) ##
 ```bash
 source build/envsetup.sh
 lunch statix_<device>-userdebug (or statix_<device>-user)
-m updatepackage
+m updatepackage -j$(nproc --all)
 ```
 ## Build A complete ROM (Sideload) ##
 ```bash
 source build/envsetup.sh
 lunch statix_<device>-userdebug (or statix_<device>-user)
-m bacon
+m bacon -j$(nproc --all)
 ```
 
 ### Submitting Patches ###
